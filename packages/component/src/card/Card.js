@@ -5,6 +5,33 @@ export class CardComponent extends HTMLElement {
 
     const template = document.createElement('template');
     template.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          background: var(--color-white);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow);
+          overflow: hidden;
+          max-width: 320px;
+        }
+        
+        ::slotted(*) {
+        padding-inline: var(--padding-lg);
+        }
+        
+        ::slotted(a:link), ::slotted(a:visited) {
+          display: block;
+        }
+        
+        ::slotted(:last-child) {
+          padding-bottom: var(--margin-lg);
+        }
+        
+        ::slotted(img) {
+          width: 100%;
+          padding-inline: 0;
+        }
+      </style>
       <header>
         <slot name="header"></slot>
       </header>
