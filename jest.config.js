@@ -8,7 +8,7 @@ module.exports = {
     // transform files with ts-jest
     '^.+\\.(js|ts)$': 'ts-jest',
   },
-  testPathIgnorePatterns: ['/cypress/'],
+  // testPathIgnorePatterns: ['/cypress/'],
   transformIgnorePatterns: [
     // allow lit-html transformation
     'node_modules/(?!lit-html)',
